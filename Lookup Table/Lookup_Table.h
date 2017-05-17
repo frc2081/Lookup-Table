@@ -2,20 +2,33 @@
 class Lookup_Table
 {
 public:
-	Lookup_Table(int rows);
+	struct Point {
+
+		Point() {
+
+		}
+
+		Point(int in, int out) {
+			input = in;
+			output = out;
+		}
+
+		double  input;
+
+		double  output;
+
+	};
+
+	Lookup_Table(int rows, Point *points );
 	~Lookup_Table();
 
 	double GetOutput(double input);
 
-	double SetInputs(double inputs[]);
-
-	double SetOutputs(double inputs[]);
 
 private:
 	int _rows;
 
-	int *_outputs;
+	Point *_point;
 
-	int *_inputs;
 };
 

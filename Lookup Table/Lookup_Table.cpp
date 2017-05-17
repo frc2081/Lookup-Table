@@ -1,32 +1,44 @@
 #include "Lookup_Table.h"
 
 
-Lookup_Table::Lookup_Table(int rows)
+Lookup_Table::Lookup_Table(int rows, Point *points)
 {
 	_rows = rows;
 
-	_inputs = new int[_rows];
+	_point = new Point[_rows];
 
-	_outputs = new int[_rows];
+	for (int i = 0; i < _rows; i++) {
+		_point[i].input = points[i].input;
+
+		_point[i].output = points[i].output;
+	}
 }
 
 
-double GetOutput(double input) {
+double Lookup_Table::GetOutput(double input) {
 
+	double lower;
 
-}
+	double greater;
 
+	for (int i = 0; i < _rows; i++) {
+			lower = (i < 0) ? _point[0].output : _point[i - 1].output;
 
-double SetInputs(double inputs[]) {
-	
-}
+			greater = ((i + 1) >= _rows) ? _point[_rows - 1].output :  _point[i + 1].output;
 
-double SetOutputs(double outputs[]) {
+		if (input >= _point[i].input) {
+			break;
+		}
+	}
 
 }
 
 Lookup_Table::~Lookup_Table()
 {
+
+	delete _point;
+
+	_rows = 0;
 
 
 }
