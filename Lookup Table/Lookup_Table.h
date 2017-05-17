@@ -4,17 +4,16 @@ class Lookup_Table
 public:
 	struct Point {
 
-		Point() {
+		Point()
+		{ }
 
-		}
-
-		Point(int in, int out) {
+		Point(int in, int out)
+		{
 			input = in;
 			output = out;
 		}
 
 		double  input;
-
 		double  output;
 
 	};
