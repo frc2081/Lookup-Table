@@ -32,6 +32,8 @@ double Lookup_Table::GetOutput(double input)
 			break;
 		}
 	}
+
+	return 0;
 }
 
 Lookup_Table::~Lookup_Table()
