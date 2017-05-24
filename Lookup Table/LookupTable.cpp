@@ -12,13 +12,6 @@ int main()
 	};
 
 	Lookup_Table *table = new Lookup_Table(rows, points);
-	table->GetOutput(10);
-
-	table->GetOutput(2.5);
-
-	table->GetOutput(0);
-
-	table->GetOutput(3);
 
 	return 0;
 }

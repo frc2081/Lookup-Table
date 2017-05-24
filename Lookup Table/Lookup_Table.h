@@ -32,7 +32,7 @@ private:
 
 	void GetLimits(double val, Point *lower, Point *greater);
 
-	double GetLine(double greater, double lower, Point *point);
+	double Interpolate(double val, Point *lower, Point *greater);
 
 };
 

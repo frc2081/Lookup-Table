@@ -21,7 +21,8 @@ double Lookup_Table::GetOutput(double input)
 
 	GetLimits(input, &lower, &greater);
 
-	return 0;
+	return Interpolate(input, &lower, &greater);
+
 }
 
 void Lookup_Table::GetLimits(double val, Point *lower, Point *greater) {
@@ -50,20 +51,21 @@ void Lookup_Table::GetLimits(double val, Point *lower, Point *greater) {
 	*lower = *greater = _point[_rows - 1];
 }
 
-double Lookup_Table::GetLine(double greater, double lower, Point *point) {
+double Lookup_Table::Interpolate(double val, Point *lower, Point *greater) {
 	//y = mx + b
-	//b = 0
-	//lower -> x=0
-	//greater -> x=1
-	//values are y
+	//input == x
+	//output == y
 
-	//double y;
-	//double slope;
+	double b = 0;
+	if (greater->input == lower->input) {
+		return greater->output;
+	}
 
-	//y = 
+	double m = (greater->output - lower->output) / (greater->input - lower->input);
 
+	double out = m * val + b;
 
-	return 0;
+	return out;
 }
 
 Lookup_Table::~Lookup_Table()
