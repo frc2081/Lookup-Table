@@ -4,6 +4,7 @@ class Lookup_Table
 public:
 	struct Point {
 
+		//Give numbers in ascedning order
 		Point()
 		{ }
 
@@ -28,6 +29,10 @@ private:
 	int _rows;
 
 	Point *_point;
+
+	void GetLimits(double val, Point *lower, Point *greater);
+
+	double GetLine(double greater, double lower, Point *point);
 
 };
 

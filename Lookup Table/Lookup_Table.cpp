@@ -17,21 +17,51 @@ Lookup_Table::Lookup_Table(int rows, Point *points)
 
 double Lookup_Table::GetOutput(double input)
 {
-	double lower;
-	double greater;
+	Point lower, greater;
+
+	GetLimits(input, &lower, &greater);
+
+	return 0;
+}
+
+void Lookup_Table::GetLimits(double val, Point *lower, Point *greater) {
+
+	double currInput;
+
+	*lower = *greater =  _point[0];
 
 	for (int i = 0; i < _rows; i++) {
-		// Won't this throw an error if i == 0 because 0 isn't less than 0 so it will try to access the -1st element in the array (which I think would actually be the last)?
-		lower = (i < 0) ? _point[0].output : _point[i - 1].output;
-		// Shouldn't it be this?
-		// lower = (i <= 0) ? _point[0].output : _point[i - 1].output;
+		currInput = _point[i].input;
 
-		greater = ((i + 1) >= _rows) ? _point[_rows - 1].output :  _point[i + 1].output;
+		*lower = (i <= 0) ? _point[0] : _point[i - 1];
 
-		if (input >= _point[i].input) {
-			break;
+		if (currInput == val) {
+			*lower = *greater = _point[i];
+			return;
 		}
+
+		if (val <= currInput) {
+			return;
+		}
+
+		*greater = ((i + 1) >= _rows) ? _point[_rows - 1] : _point[i + 1];
 	}
+
+	*lower = *greater = _point[_rows - 1];
+}
+
+double Lookup_Table::GetLine(double greater, double lower, Point *point) {
+	//y = mx + b
+	//b = 0
+	//lower -> x=0
+	//greater -> x=1
+	//values are y
+
+	//double y;
+	//double slope;
+
+	//y = 
+
 
 	return 0;
 }
