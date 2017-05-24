@@ -112,10 +112,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Lookup_Table.h" />
+    <ClInclude Include="Lookup_Table_Input_Reader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LookupTable.cpp" />
     <ClCompile Include="Lookup_Table.cpp" />
+    <ClCompile Include="Lookup_Table_Input_Reader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
