@@ -115,7 +115,7 @@
     <ClInclude Include="Lookup_Table_Input_Reader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LookupTable.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Lookup_Table.cpp" />
     <ClCompile Include="Lookup_Table_Input_Reader.cpp" />
   </ItemGroup>

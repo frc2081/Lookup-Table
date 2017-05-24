@@ -26,10 +26,10 @@
     <ClCompile Include="Lookup_Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LookupTable.cpp">
+    <ClCompile Include="Lookup_Table_Input_Reader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Lookup_Table_Input_Reader.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
