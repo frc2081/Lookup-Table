@@ -1,0 +1,39 @@
+#!/bin/bash
+
+EXEC='../x64/Debug/Lookup Table.exe'
+
+DATA='./values.txt'
+
+SUCCESSES=0
+
+FAILURES=0
+
+Assert_Value ()
+{
+
+	input=$1
+	expected=$2
+	output=$("$EXEC" "$DATA" $input)
+	test_name="$3"
+
+	if [ "$expected" != "$output" ]
+	then
+		echo "Test named '$test_name' failed"
+		echo "Test was '$input', got '$output', expected '$expected'"
+		FAILURES=$(expr $FAILURES + 1)
+	else
+		SUCCESSES=$(expr $SUCCESSES + 1)
+	fi
+}
+
+Assert_Value 5 7.000000 "Testing direct value"
+
+Assert_Value 0 2.000000 "Testing lower value"
+
+Assert_Value 10 23.000000 "Testing higher value"
+
+Assert_Value 2.5 5.000000 "Testing interpolated value"
+
+Assert_Value 3.5 6.000000 "Testing interpolated same value"
+
+echo "Had '$SUCCESSES' successes, and '$FAILURES' failures"
