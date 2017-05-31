@@ -1,6 +1,6 @@
-#include "Lookup_Table.h"
+#include "LookupTable.h"
 
-Lookup_Table::Lookup_Table(int rows, Point *points)
+LookupTable::LookupTable(int rows, Point *points)
 {
 	_rows = rows;
 
@@ -14,7 +14,7 @@ Lookup_Table::Lookup_Table(int rows, Point *points)
 }
 
 
-double Lookup_Table::GetOutput(double input)
+double LookupTable::GetOutput(double input)
 {
 	Point lower, greater;
 
@@ -24,11 +24,11 @@ double Lookup_Table::GetOutput(double input)
 
 }
 
-void Lookup_Table::GetLimits(double val, Point *lower, Point *greater) {
+void LookupTable::GetLimits(double val, Point *lower, Point *greater) {
 
 	double currInput;
 
-	*lower = *greater =  _point[0];
+	*lower = *greater = _point[0];
 
 	for (int i = 0; i < _rows; i++) {
 		currInput = _point[i].input;
@@ -50,7 +50,7 @@ void Lookup_Table::GetLimits(double val, Point *lower, Point *greater) {
 	*lower = *greater = _point[_rows - 1];
 }
 
-double Lookup_Table::Interpolate(double val, Point *lower, Point *greater) {
+double LookupTable::Interpolate(double val, Point *lower, Point *greater) {
 	//y = mx + b
 	//input == x
 	//output == y
@@ -67,7 +67,7 @@ double Lookup_Table::Interpolate(double val, Point *lower, Point *greater) {
 	return out;
 }
 
-Lookup_Table::~Lookup_Table()
+LookupTable::~LookupTable()
 {
 	delete _point;
 

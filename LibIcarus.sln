@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibIcarusTests", "LibIcarusTests\LibIcarusTests.vcxproj", "{D4453A86-1DC2-4922-B3F5-75A610B2D1FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibIcarus", "LibIcarus\LibIcarus.vcxproj", "{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{D4453A86-1DC2-4922-B3F5-75A610B2D1FF}.Release|x64.Build.0 = Release|x64
 		{D4453A86-1DC2-4922-B3F5-75A610B2D1FF}.Release|x86.ActiveCfg = Release|Win32
 		{D4453A86-1DC2-4922-B3F5-75A610B2D1FF}.Release|x86.Build.0 = Release|Win32
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Debug|x64.ActiveCfg = Debug|x64
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Debug|x64.Build.0 = Debug|x64
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Debug|x86.ActiveCfg = Debug|Win32
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Debug|x86.Build.0 = Debug|Win32
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Release|x64.ActiveCfg = Release|x64
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Release|x64.Build.0 = Release|x64
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Release|x86.ActiveCfg = Release|Win32
+		{F02BC607-F6C1-4907-AA24-0EE655CC0CD9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

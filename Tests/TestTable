@@ -1,7 +1,6 @@
 #!/bin/bash
 
-EXEC='../x64/Debug/Lookup Table.exe'
-
+EXEC='../x64/Debug/LibIcarusTests.exe'
 DATA='./values.txt'
 
 SUCCESSES=0
