@@ -1,6 +1,5 @@
 #include "Lookup_Table.h"
 
-
 Lookup_Table::Lookup_Table(int rows, Point *points)
 {
 	_rows = rows;
