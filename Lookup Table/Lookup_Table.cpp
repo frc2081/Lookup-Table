@@ -57,7 +57,7 @@ double Lookup_Table::Interpolate(double val, Point *lower, Point *greater) {
 	//output == y
 
 	double b = 0;
-	if (greater->input == lower->input) {
+	if (greater->input == lower->input || greater->output == lower->output) {
 		return greater->output;
 	}
 
