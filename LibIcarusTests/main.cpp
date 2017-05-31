@@ -1,6 +1,7 @@
 #include "LookupTableInputReader.h"
 #include "LookupTable.h"
 
+using namespace LibIcarus;
 int main(int argc, char **argv)
 {
 	// If there are less than 2 arguments besides the program, return exit code 1
