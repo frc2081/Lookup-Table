@@ -1,23 +1,42 @@
-#include "LookupTableInputReader.h"
-#include "LookupTable.h"
+#include "UnitTestRunner.h"
+#include "LookupTableTests.h"
+#include "ConsoleWriter.h"
 
-using namespace LibIcarus;
+int LogResult(ConsoleWriter* writer, UnitTestRunner::UnitTestResult *result);
+
+#define IUTS(method, name) UnitTestRunner::UnitTest(name, method) 
 int main(int argc, char **argv)
 {
-	// If there are less than 2 arguments besides the program, return exit code 1
-	if (argc < 3) return 1;
+	int i, errorCode = 0;
+	const int testCount = 2;
+	UnitTestRunner::UnitTest tests[testCount] =
+	{
+		IUTS(LookupTableTests::LookupTableCaseOne, "Lookup Table #1"),
+		IUTS(LookupTableTests::LookupTableCaseTwo, "Lookup Table #2"),
+	};
 
-	// Make a new Input_Reader using the first CLI argument (should be filename/filepath)
-	LookupTableInputReader data(argv[1]);
+	UnitTestRunner::UnitTestSet testSet(tests, testCount);
+	UnitTestRunner runner(testSet);
+	ConsoleWriter logger(ConsoleWriter::AnsiEscaped);
 
-	// Make a new Lookup_Table using the data made by the Input_Reader
-	LookupTable *table = new LookupTable(data.Rows, data.Points);
+	int resultCount;
+	UnitTestRunner::UnitTestResult *results;
+	runner.Run(&results, &resultCount);
 
-	// Get the output values from the table based on the second CLI argument (the number you want to get)
-	double x = table->GetOutput(atof(argv[2]));
+	for (i = 0; i < resultCount; i++)
+		errorCode |= LogResult(&logger, &results[i]);
 
-	// Print the aforementioned value
-	printf("%f", x);
+	delete[] results;
+	return errorCode;
+}
 
-	return 0;
+int LogResult(ConsoleWriter* writer, UnitTestRunner::UnitTestResult *result)
+{
+	int errCode = result->ReturnCode;
+	void (ConsoleWriter::*logMethod)(const char*) = errCode == 0
+		? &ConsoleWriter::WriteInfo
+		: &ConsoleWriter::WriteError;
+
+	(writer->*logMethod)(result->Message);
+	return errCode;
 }
