@@ -113,12 +113,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleWriter.cpp" />
+    <ClCompile Include="LookupTableTests.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestBase.cpp" />
+    <ClCompile Include="UnitTestRunner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibIcarus\LibIcarus.vcxproj">
       <Project>{f02bc607-f6c1-4907-aa24-0ee655cc0cd9}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleWriter.h" />
+    <ClInclude Include="LookupTableTests.h" />
+    <ClInclude Include="TestBase.h" />
+    <ClInclude Include="UnitTestRunner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
