@@ -13,24 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\LookupTable">
+      <UniqueIdentifier>{04019fbd-31c0-4110-b57c-bf5970222a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Diagnostics">
+      <UniqueIdentifier>{e63726b8-f9a3-47a6-ae16-f62ab5c3f95d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LookupTable">
+      <UniqueIdentifier>{3dd30258-43c4-4b20-bac2-d152183bad5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Diagnostics">
+      <UniqueIdentifier>{40fa38e9-ea9c-4e99-a53d-93f54941d331}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LookupTable.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\LookupTable</Filter>
     </ClInclude>
     <ClInclude Include="LookupTableInputReader.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\LookupTable</Filter>
+    </ClInclude>
+    <ClInclude Include="ISignalValidator.h">
+      <Filter>Header Files\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="SignalComplexValidator.h">
+      <Filter>Header Files\Diagnostics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LookupTable.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LookupTable</Filter>
     </ClCompile>
     <ClCompile Include="LookupTableInputReader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LookupTable</Filter>
+    </ClCompile>
+    <ClCompile Include="SignalComplexValidator.cpp">
+      <Filter>Source Files\Diagnostics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
