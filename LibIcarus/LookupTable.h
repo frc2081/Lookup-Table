@@ -10,7 +10,7 @@ namespace LibIcarus
 			Point()
 			{ }
 
-			Point(int in, int out)
+			Point(double in, double out)
 			{
 				input = in;
 				output = out;

@@ -61,13 +61,13 @@ void LookupTableTests::LookupTableCaseTwo()
 	AssertLookupValue(&table, 2.35, 20.82);
 	AssertLookupValue(&table, 999, 6.20);
 	AssertLookupValue(&table, 1048, 13.08);
-	AssertLookupValue(&table, 1051, 18);
+	AssertLookupValue(&table, 1051, 17.8);
 }
 
 void LookupTableTests::AssertLookupValue(LookupTable* table, double input, double expected)
 {
 	double output;
-	const double threshold = 0.0001;
+	const double threshold = 0.01;
 	output = table->GetOutput(input);
 
 	if (output < expected - threshold || output > expected + threshold)

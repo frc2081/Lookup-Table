@@ -57,14 +57,15 @@ namespace LibIcarus
 		//input == x
 		//output == y
 
-		double b = 0;
 		if (greater->input == lower->input || greater->output == lower->output) {
 			return greater->output;
 		}
 
 		double m = (greater->output - lower->output) / (greater->input - lower->input);
 
-		double out = m * val + b;
+
+		//m * input - input.lower
+		double out = m * (val - lower->input) + lower->output;
 
 		return out;
 	}
