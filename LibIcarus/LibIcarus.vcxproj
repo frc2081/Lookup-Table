@@ -146,11 +146,15 @@
     <ClInclude Include="LookupTableInputReader.h" />
     <ClInclude Include="ISignalValidator.h" />
     <ClInclude Include="SignalComplexValidator.h" />
+    <ClInclude Include="SignalSimpleValidator.h" />
+    <ClInclude Include="SignalValidator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LookupTable.cpp" />
     <ClCompile Include="LookupTableInputReader.cpp" />
     <ClCompile Include="SignalComplexValidator.cpp" />
+    <ClCompile Include="SignalSimpleValidator.cpp" />
+    <ClCompile Include="SignalValidator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,16 +1,16 @@
 #pragma once
 #include "ISignalValidator.h"
+#include "SignalValidator.h"
 #include "LookupTable.h"
 namespace LibIcarus {
-	template<class Tinput> class SignalValidator : ISignalValidator<Tinput>
+	template<class TInput> class SignalComplexValidator : SignalValidator<TInput>
 	{
 	public:
-		~SignalValidator();
+		~SignalComplexValidator();
 
+		double TInputGetDouble(TInput input) = 0;
 
 	protected:
-
-		virtual double readSignalFromHardware() = 0;
 
 		LookupTable *lower;
 
