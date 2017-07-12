@@ -1,7 +1,7 @@
 #pragma once
 #include "SignalValidator.h"
 namespace LibIcarus {
-	template<class TInput> class SignalSimpleValidator : SignalValidator<TInput>
+	template<class TInput> class __declspec(dllexport) SignalSimpleValidator : SignalValidator<TInput>
 	{
 	public:
 

@@ -117,7 +117,11 @@
     <ClCompile Include="LookupTableTests.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TestBase.cpp" />
+    <ClCompile Include="TestComplexValidator.cpp" />
+    <ClCompile Include="TestSimpleValidator.cpp" />
+    <ClCompile Include="TestValidators.cpp" />
     <ClCompile Include="UnitTestRunner.cpp" />
+    <ClCompile Include="ValidatorTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibIcarus\LibIcarus.vcxproj">
@@ -128,7 +132,12 @@
     <ClInclude Include="ConsoleWriter.h" />
     <ClInclude Include="LookupTableTests.h" />
     <ClInclude Include="TestBase.h" />
+    <ClInclude Include="TestComplexValidator.h" />
+    <ClInclude Include="TestInput.h" />
+    <ClInclude Include="TestSimpleValidator.h" />
+    <ClInclude Include="TestValidators.h" />
     <ClInclude Include="UnitTestRunner.h" />
+    <ClInclude Include="ValidatorTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,12 +3,12 @@
 #include "SignalValidator.h"
 #include "LookupTable.h"
 namespace LibIcarus {
-	template<class TInput> class SignalComplexValidator : SignalValidator<TInput>
+	template<class TInput> class __declspec(dllexport) SignalComplexValidator : SignalValidator<TInput>
 	{
 	public:
 		~SignalComplexValidator();
 
-		double TInputGetDouble(TInput input) = 0;
+		virtual double TInputGetDouble(TInput input) = 0;
 
 	protected:
 
